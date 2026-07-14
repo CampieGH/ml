@@ -32,28 +32,31 @@ def _add_click(audio: np.ndarray, start: int, amplitude: float, length: int = 25
 
 
 def generate_synthetic_beat(path: Path, spec: SyntheticBeatSpec = SyntheticBeatSpec()) -> Path:
-    """Generate a deterministic beat with contrasting four-bar sections.
+    """Generate a deterministic beat with clearly contrasting four-bar sections.
 
-    Section A has kick and clap only. Section B adds eighth-note hats.
-    This gives tests known BPM, bar positions and an energy change to detect.
+    Sparse sections use quieter quarter-note pulses. Dense sections use louder
+    quarter-note pulses plus eighth-note hats. The contrast is intentionally
+    exaggerated so tests validate segmentation rather than psychoacoustics.
     """
     total_samples = int(round(spec.duration_seconds * spec.sample_rate))
     audio = np.zeros(total_samples, dtype=np.float32)
 
     for bar in range(spec.bars):
         dense_section = (bar // 4) % 2 == 1
+        main_gain = 1.0 if dense_section else 0.28
+
         for beat in range(spec.beats_per_bar):
             beat_time = (bar * spec.beats_per_bar + beat) * spec.beat_seconds
             sample = int(round(beat_time * spec.sample_rate))
 
             if beat in (0, 2):
-                _add_click(audio, sample, amplitude=1.0, length=420)
+                _add_click(audio, sample, amplitude=main_gain, length=420)
             if beat in (1, 3):
-                _add_click(audio, sample, amplitude=0.7, length=240)
+                _add_click(audio, sample, amplitude=main_gain * 0.72, length=240)
 
             if dense_section:
                 half_beat = sample + int(round(spec.beat_seconds * spec.sample_rate / 2))
-                _add_click(audio, half_beat, amplitude=0.22, length=100)
+                _add_click(audio, half_beat, amplitude=0.42, length=120)
 
     peak = float(np.max(np.abs(audio)))
     if peak > 0:
