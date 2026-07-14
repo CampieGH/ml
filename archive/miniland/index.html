@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MiniLand</title>
+<style>
+  /* Сброс стилей */
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1a1a1a, #2c2c2c);
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .container {
+    max-width: 600px;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #00ffff;
+    text-shadow: 2px 2px 5px rgba(0,255,255,0.3);
+  }
+
+  p {
+    font-size: 1.2rem;
+    color: #aaa;
+  }
+
+  .footer {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    font-size: 0.9rem;
+    color: #555;
+  }
+
+  /* Анимация легкого мерцания */
+  h1 {
+    animation: glow 2s infinite alternate;
+  }
+
+  @keyframes glow {
+    from { text-shadow: 0 0 5px #00ffff; }
+    to { text-shadow: 0 0 20px #00ffff; }
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1>MiniLand</h1>
+    <p>Сайт в разработке...</p>
+  </div>
+  <div class="footer">© 2026 MiniLand</div>
+</body>
+</html>
