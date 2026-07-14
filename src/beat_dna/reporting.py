@@ -3,7 +3,6 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-import librosa
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -29,10 +28,10 @@ def save_plot(
     output_dir.mkdir(parents=True, exist_ok=True)
     destination = output_dir / f"{analysis.stem}.png"
 
-    times = librosa.times_like(audio, sr=sample_rate)
+    waveform_times = np.arange(audio.size, dtype=float) / sample_rate
     figure, axes = plt.subplots(2, 1, figsize=(14, 8), sharex=True)
 
-    axes[0].plot(times, audio, linewidth=0.6)
+    axes[0].plot(waveform_times, audio, linewidth=0.6)
     axes[0].set_title(f"Waveform: {analysis.stem}")
     axes[0].set_ylabel("Amplitude")
 
