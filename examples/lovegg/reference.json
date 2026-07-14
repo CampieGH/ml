@@ -1,0 +1,112 @@
+{
+  "source": {
+    "filename": "senpai★ - LOVEGG ft. terra.mp3",
+    "sha256": "5a70fb71f7b299159a9a790a387496b717594122db0956a14de7ab6cf73849e3",
+    "size_bytes": 4993625
+  },
+  "ground_truth": {
+    "bpm": 175.0,
+    "key": "F minor",
+    "artist": "senpai★",
+    "title": "LOVEGG ft. terra",
+    "tags": [
+      "hoodtrap",
+      "guitar"
+    ],
+    "listed_as_popular": true
+  },
+  "analysis": {
+    "duration_seconds": 124.839,
+    "sample_rate": 22050,
+    "estimated_bpm_unconstrained": 117.454,
+    "known_bpm_used_for_grid": 175.0,
+    "estimated_bars": 91,
+    "detected_onsets": 419,
+    "global": {
+      "rms_mean": 0.400292,
+      "rms_peak": 0.742822,
+      "spectral_centroid_hz": 1879.21,
+      "spectral_flatness": 0.008179,
+      "zero_crossing_rate": 0.054327,
+      "band_energy": {
+        "sub": 0.006795,
+        "bass": 0.067667,
+        "low_mid": 0.376968,
+        "mid": 0.307713,
+        "presence": 0.160682,
+        "high": 0.076865,
+        "air": 0.003117
+      }
+    },
+    "top_chroma_notes": [
+      {
+        "note": "F",
+        "strength": 0.5978
+      },
+      {
+        "note": "C#",
+        "strength": 0.5143
+      },
+      {
+        "note": "C",
+        "strength": 0.445
+      },
+      {
+        "note": "E",
+        "strength": 0.3026
+      },
+      {
+        "note": "F#",
+        "strength": 0.2706
+      }
+    ],
+    "onset_step_histogram_16th": [
+      3,
+      52,
+      2,
+      0,
+      10,
+      48,
+      0,
+      67,
+      0,
+      80,
+      0,
+      43,
+      0,
+      73,
+      1,
+      40
+    ],
+    "four_bar_sections": [
+      {"start_bar": 1, "end_bar": 4, "mean_rms": 0.253043, "density_label": "sparse"},
+      {"start_bar": 5, "end_bar": 8, "mean_rms": 0.36618, "density_label": "sparse"},
+      {"start_bar": 9, "end_bar": 12, "mean_rms": 0.424232, "density_label": "dense"},
+      {"start_bar": 13, "end_bar": 16, "mean_rms": 0.404605, "density_label": "dense"},
+      {"start_bar": 17, "end_bar": 20, "mean_rms": 0.423454, "density_label": "dense"},
+      {"start_bar": 21, "end_bar": 24, "mean_rms": 0.399912, "density_label": "sparse"},
+      {"start_bar": 25, "end_bar": 28, "mean_rms": 0.413836, "density_label": "dense"},
+      {"start_bar": 29, "end_bar": 32, "mean_rms": 0.407136, "density_label": "dense"},
+      {"start_bar": 33, "end_bar": 36, "mean_rms": 0.412214, "density_label": "dense"},
+      {"start_bar": 37, "end_bar": 40, "mean_rms": 0.412055, "density_label": "dense"},
+      {"start_bar": 41, "end_bar": 44, "mean_rms": 0.395694, "density_label": "sparse"},
+      {"start_bar": 45, "end_bar": 48, "mean_rms": 0.409096, "density_label": "dense"},
+      {"start_bar": 49, "end_bar": 52, "mean_rms": 0.404637, "density_label": "dense"},
+      {"start_bar": 53, "end_bar": 56, "mean_rms": 0.410986, "density_label": "dense"},
+      {"start_bar": 57, "end_bar": 60, "mean_rms": 0.405292, "density_label": "dense"},
+      {"start_bar": 61, "end_bar": 64, "mean_rms": 0.393384, "density_label": "sparse"},
+      {"start_bar": 65, "end_bar": 68, "mean_rms": 0.409879, "density_label": "dense"},
+      {"start_bar": 69, "end_bar": 72, "mean_rms": 0.402936, "density_label": "dense"},
+      {"start_bar": 73, "end_bar": 76, "mean_rms": 0.400419, "density_label": "sparse"},
+      {"start_bar": 77, "end_bar": 80, "mean_rms": 0.397395, "density_label": "sparse"},
+      {"start_bar": 81, "end_bar": 84, "mean_rms": 0.391394, "density_label": "sparse"},
+      {"start_bar": 85, "end_bar": 88, "mean_rms": 0.396823, "density_label": "sparse"},
+      {"start_bar": 89, "end_bar": 91, "mean_rms": 0.245711, "density_label": "sparse"}
+    ]
+  },
+  "notes": {
+    "audio_committed": false,
+    "reason": "The repository is public, so the commercial reference audio was not committed. This file stores reproducible metadata, checksum and derived analysis only.",
+    "important_result": "Unconstrained tempo detection returned 117.454 BPM instead of the supplied 175 BPM, so the known BPM was used to build the musical grid. This is a useful failing reference case for improving tempo inference."
+  }
+}
