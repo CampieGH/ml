@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "beat-dna"
+version = "0.1.0"
+description = "Local beat analysis toolkit"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+  "librosa>=0.10.2,<0.12",
+  "matplotlib>=3.8,<4",
+  "numpy>=1.26,<3",
+  "pydantic>=2.7,<3",
+  "soundfile>=0.12,<1",
+  "typer>=0.12,<1",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<9"]
+
+[project.scripts]
+beat-dna = "beat_dna.cli:app"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

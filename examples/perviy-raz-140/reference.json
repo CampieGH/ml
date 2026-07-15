@@ -1,0 +1,57 @@
+{
+  "source": {
+    "filename": "youngslashprod k4neswagga nowaycvv – perviy raz 140.mp3",
+    "sha256": "bee62fe16230550d1a210bae00f7c942da33da7a2988218d8fb536faa57532cb",
+    "size_bytes": 4474014
+  },
+  "ground_truth": {
+    "bpm": 140.0,
+    "key": null,
+    "artist": "youngslashprod k4neswagga nowaycvv",
+    "title": "perviy raz 140"
+  },
+  "analysis": {
+    "duration_seconds": 151.254,
+    "tempo_candidates_first_45_seconds": [
+      92.29,
+      95.70,
+      143.55,
+      136.00,
+      71.78,
+      89.10,
+      152.00,
+      129.20,
+      99.38,
+      73.83
+    ],
+    "known_bpm_match": {
+      "target_bpm": 140.0,
+      "nearest_detected_candidates": [143.55, 136.00],
+      "note": "Known BPM is consistent with the strongest double-time region, but unconstrained detection is ambiguous."
+    },
+    "tentative_key_candidates": [
+      {"key": "C major", "score": 0.7000},
+      {"key": "F major", "score": 0.6463},
+      {"key": "D minor", "score": 0.6354},
+      {"key": "C minor", "score": 0.5155},
+      {"key": "G major", "score": 0.4760},
+      {"key": "A minor", "score": 0.4597}
+    ],
+    "top_chroma_notes_first_45_seconds": [
+      {"note": "C", "strength": 1.000},
+      {"note": "D", "strength": 0.954},
+      {"note": "F", "strength": 0.662},
+      {"note": "G", "strength": 0.616},
+      {"note": "A", "strength": 0.593},
+      {"note": "A#", "strength": 0.502},
+      {"note": "E", "strength": 0.471},
+      {"note": "D#", "strength": 0.464}
+    ],
+    "detected_onsets_first_45_seconds": 47
+  },
+  "notes": {
+    "audio_committed": false,
+    "reason": "The repository is still reported as public by the GitHub API, so the source audio was not committed.",
+    "important_result": "The known 140 BPM is plausible, while key detection remains ambiguous between C major and D minor/F major related material. This should be treated as unverified until stem separation or manual listening confirms it."
+  }
+}
